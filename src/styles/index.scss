@@ -15,11 +15,18 @@ body {
 
   // default
   font-family: 'Montserrat', sans-serif;
-  background-color: $bg-default-color;
 }
 
 header {
   background-color: $dark-green;
+}
+
+#menu {
+  background-color: $bg-light-color;
+}
+
+#api-results {
+  background-color: $bg-default-color;
 }
 
 .container {
@@ -39,17 +46,13 @@ header {
     object-fit: cover;
   }
 
-  .leaves {
-    z-index: 5;
-  }
-
   .person {
     position: absolute;
     left: 830px;
     height: 450px;
   }
-}
 
-#menu {
-  background-color: $bg-light-color;
+  .leaves {
+    z-index: 5;
+  }
 }
