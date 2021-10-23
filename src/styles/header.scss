@@ -1,0 +1,24 @@
+header {
+  background-color: $dark-green;
+}
+
+.header-container {
+  position: relative;
+  align-items: center;
+  background-color: $light-green;
+
+  .figure {
+    height: 520px;
+    object-fit: cover;
+  }
+
+  .person {
+    position: absolute;
+    left: 830px;
+    height: 450px;
+  }
+
+  .leaves {
+    z-index: 5;
+  }
+}
