@@ -1,4 +1,6 @@
-export const formSelectOptions = {
+import { requestSearchResults } from '../services/api-service';
+
+const formSelectOptions = {
   sun: [
     { label: 'No', value: 'no' },
     { label: 'Low', value: 'low' },
@@ -15,11 +17,17 @@ export const formSelectOptions = {
   ],
 };
 
+export function getFormSelectOptions() {
+  return formSelectOptions;
+}
+
 export function getSelectValues() {
   const form = document.querySelector('#menu-container');
   const elements = form.elements;
 
-  console.log(elements['sun'].value);
-  console.log(elements['water'].value);
-  console.log(elements['pets'].value);
+  const sunValue = elements['sun'].value;
+  const waterValue = elements['water'].value;
+  const petsValue = elements['pets'].value;
+
+  requestSearchResults(sunValue, waterValue, petsValue).then((result) => console.log({ result }));
 }
