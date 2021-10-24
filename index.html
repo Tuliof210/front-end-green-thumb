@@ -3,39 +3,34 @@
   <head>
     <title>Front End Test - Greenthumb</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="./src/styles/index.scss" />
+
     <script defer src="./src/scripts/index.js"></script>
   </head>
 
   <body>
     <header>
-      <div class="container header-container">
+      <div id="header-container">
         <img
           class="figure leaves"
+          id="left-leaves"
           src="./src/assets/images/hero/desktop/left-leaves.png"
           alt="left-leaves"
         />
-        <img
-          class="figure person"
-          src="./src/assets/images/hero/desktop/plantperson.png"
-          alt="plant-person"
-        />
+        <!-- <img class="figure" id="person" src="./src/assets/images/hero/desktop/plantperson.png" alt="plant-person" /> -->
         <img
           class="figure leaves"
+          id="right-leaves"
           src="./src/assets/images/hero/desktop/right-leaves.png"
           alt="right-leaves"
         />
       </div>
     </header>
     <main>
-      <div id="menu">
-        <div id="menu-container" class="container"></div>
-      </div>
-      <div id="api-results">
-        <div id="api-results-container" class="container"></div>
-      </div>
+      <div id="menu"></div>
+      <div id="search-results"></div>
     </main>
   </body>
 </html>

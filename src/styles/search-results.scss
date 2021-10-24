@@ -1,0 +1,25 @@
+.search-results-container {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+
+  .left-text {
+    width: 50%;
+
+    h1 {
+      font-size: 45px;
+      font-weight: 700;
+      color: $default-font-color;
+    }
+    p {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 400;
+      color: $default-font-color;
+    }
+  }
+  .right-icon {
+    width: 50%;
+    text-align: center;
+  }
+}

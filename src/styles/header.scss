@@ -1,0 +1,36 @@
+header {
+  background-color: $dark-green;
+}
+
+#header-container {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: auto;
+  max-width: 1500px;
+
+  background-color: $light-green;
+
+  .figure {
+    height: 520px;
+  }
+
+  .person {
+    position: absolute;
+    // left: 830px;
+    // height: 450px;
+  }
+
+  .leaves {
+    z-index: 5;
+  }
+  #left-leaves {
+    width: 60%;
+  }
+  #right-leaves {
+    width: 25%;
+  }
+}

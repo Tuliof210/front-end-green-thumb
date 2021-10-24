@@ -1,0 +1,61 @@
+#menu {
+  padding: 50px 0;
+  background-color: $bg-light-color;
+}
+
+.menu-icon-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+
+  width: 75px;
+  height: 75px;
+
+  .menu-icon {
+    width: 100%;
+  }
+}
+
+.menu-description {
+  font-size: 14px;
+  color: $menu-font-color;
+}
+
+.menu-select-container {
+  position: relative;
+
+  .menu-select {
+    outline: none;
+    margin: 25px 0;
+    padding: 10px 15px;
+
+    display: block;
+    width: 100%;
+
+    color: $border-color;
+    background-color: transparent;
+    border: 1px solid $border-color;
+    border-radius: 25px;
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .down-arrow {
+    width: 10px;
+    height: 10px;
+
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    border-color: $border-color;
+
+    position: absolute;
+    right: 10px;
+    bottom: 50%;
+
+    transform: rotate(45deg) translateY(40%);
+    -moz-transform: rotate(45deg) translateY(40%);
+    -webkit-transform: rotate(45deg) translateY(40%);
+  }
+}
