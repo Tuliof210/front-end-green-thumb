@@ -1,3 +1,27 @@
 #menu {
+  padding: 50px 0;
   background-color: $bg-light-color;
+}
+
+#menu-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: $default-width-desktop;
+}
+
+.menu-icon-container {
+  display: flex;
+  align-items: center;
+
+  width: 75px;
+  height: 75px;
+
+  .menu-icon {
+    width: 100%;
+  }
+}
+
+.menu-description {
+  font-size: 14px;
+  color: $menu-font-color;
 }
