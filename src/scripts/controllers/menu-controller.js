@@ -15,12 +15,11 @@ export const formSelectOptions = {
   ],
 };
 
-export function triggerSubmit() {
-  console.log('hi');
-  document.forms['menu'].submit();
-}
+export function getSelectValues() {
+  const form = document.querySelector('#menu-container');
+  const elements = form.elements;
 
-function submitOptions(event) {
-  event.preventDefault();
-  console.log(event);
+  console.log(elements['sun'].value);
+  console.log(elements['water'].value);
+  console.log(elements['pets'].value);
 }
