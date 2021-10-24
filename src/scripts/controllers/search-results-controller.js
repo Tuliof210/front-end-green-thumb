@@ -8,7 +8,14 @@ const searchResultsElement = document.querySelector('#search-results');
 
 export function buildComponent() {
   const results = getCurrentSearchResults();
-  const component = results.length ? SearchResultsComponent : EmptySearchResultsComponent;
-
+  const component = results.length ? buildSearchResultsComponent() : buildEmptySearchResultsComponent();
   searchResultsElement.innerHTML = component;
+}
+
+function buildEmptySearchResultsComponent() {
+  return EmptySearchResultsComponent;
+}
+
+function buildSearchResultsComponent() {
+  return SearchResultsComponent;
 }
