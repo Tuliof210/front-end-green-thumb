@@ -1,11 +1,11 @@
 import MenuComponent from '../../components/menu-component.html';
 import { getFormSelectOptions, getSelectValues } from '../controllers/menu-controller';
 
-import CardComponent from '../../components/card-component.html';
+import { buildComponent } from '../controllers/search-results-controller';
 
 export function loadComponents() {
   loadMenuComponent();
-  loadCardComponent();
+  loadSearchResultsComponent();
 }
 
 //==============================================================================
@@ -35,7 +35,7 @@ function loadMenuOptions(tag, name) {
 
 //==============================================================================
 
-function loadCardComponent() {
+function loadSearchResultsComponent() {
   const searchResultsElement = document.querySelector('#search-results');
-  searchResultsElement.innerHTML = CardComponent;
+  searchResultsElement.innerHTML = buildComponent();
 }

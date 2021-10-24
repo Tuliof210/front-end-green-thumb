@@ -20,7 +20,5 @@ export async function requestSearchResults(sun, water, pets) {
   } catch (error) {
     console.log(error);
     currentResults = [];
-  } finally {
-    return currentResults;
   }
 }

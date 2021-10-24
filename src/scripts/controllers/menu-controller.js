@@ -1,4 +1,5 @@
 import { requestSearchResults } from '../services/api-service';
+import { buildComponent } from './search-results-controller';
 
 const formSelectOptions = {
   sun: [
@@ -29,5 +30,5 @@ export function getSelectValues() {
   const waterValue = elements['water'].value;
   const petsValue = elements['pets'].value;
 
-  requestSearchResults(sunValue, waterValue, petsValue).then((result) => console.log({ result }));
+  requestSearchResults(sunValue, waterValue, petsValue).then(buildComponent);
 }
