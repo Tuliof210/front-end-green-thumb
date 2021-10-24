@@ -23,7 +23,7 @@ export function getFormSelectOptions() {
 }
 
 export function getSelectValues() {
-  const form = document.querySelector('#menu-container');
+  const form = document.querySelector('#menu-form');
   const elements = form.elements;
 
   const sunValue = elements['sun'].value;
