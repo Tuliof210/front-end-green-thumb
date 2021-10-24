@@ -26,11 +26,12 @@ function loadMenuFunctions() {
 }
 
 function loadMenuOptions(tag, name) {
+  const defaultOption = '<option value="">Select...</option>';
   const createOption = (optionData) => `<option value="${optionData.value}">${optionData.label}</option>`;
 
   const formSelectOptions = getFormSelectOptions();
   const options = formSelectOptions[name].map(createOption);
-  document.querySelector(tag).innerHTML = options.join('');
+  document.querySelector(tag).innerHTML = [defaultOption, ...options].join('');
 }
 
 //==============================================================================

@@ -9,16 +9,21 @@ header {
 
   .figure {
     height: 520px;
-    object-fit: cover;
   }
 
   .person {
     position: absolute;
-    left: 830px;
-    height: 450px;
+    // left: 830px;
+    // height: 450px;
   }
 
   .leaves {
     z-index: 5;
+  }
+  #left-leaves {
+    width: 60%;
+  }
+  #right-leaves {
+    width: 20%;
   }
 }
