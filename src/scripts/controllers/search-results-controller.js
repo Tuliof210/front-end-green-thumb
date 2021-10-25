@@ -45,8 +45,6 @@ function findStaffFavorite(currentSearch) {
 }
 
 function createCardElement(item) {
-  console.log(item);
-
   const componentBase = item.staff_favorite ? FavoriteCardComponent : CardComponent;
   const componentWithId = componentBase.replace('generic-id', `card-${item.id}`);
 
