@@ -1,0 +1,189 @@
+.empty-results-container {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-text {
+  h1 {
+    font-size: 45px;
+    font-weight: 700;
+    color: $gray-font-color;
+  }
+
+  p {
+    width: 50%;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: $gray-font-color;
+  }
+}
+
+.right-icon {
+  width: 50%;
+  text-align: center;
+}
+
+.search-results-container {
+  display: block;
+  padding: 40px 0;
+}
+
+.search-results-header {
+  img {
+    width: 150px;
+  }
+
+  h1 {
+    margin: 10px 0;
+    font-size: 55px;
+    font-weight: 700;
+    color: $dark-font-color;
+  }
+}
+
+#search-results-grid {
+  margin-top: 50px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.search-result-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 60px 0 0;
+  width: 100%;
+  height: 50px;
+
+  color: $dark-green;
+  border: 1.5px solid $dark-green;
+  border-radius: 25px;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  * {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  img {
+    width: 25px;
+    height: 30px;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: $tablet-screen) {
+  .search-results-header {
+    img {
+      width: 120px;
+    }
+
+    h1 {
+      font-size: 45px;
+    }
+  }
+
+  #search-results-grid {
+    margin-top: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .left-text {
+    h1 {
+      font-size: 35px;
+    }
+
+    p {
+      width: 55%;
+      font-size: 12px;
+    }
+  }
+
+  .right-icon {
+    img {
+      width: 80px;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-screen) {
+  .empty-results-container {
+    padding: 20px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-results-header {
+    margin: 0 20px;
+
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  .left-text {
+    max-width: 270px;
+    text-align: left;
+
+    h1 {
+      margin: 30px 0 20px;
+      font-size: 45px;
+    }
+
+    p {
+      width: 100%;
+      text-align: left;
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+
+  .right-icon {
+    margin: 40px 0;
+    width: 50%;
+  }
+
+  #search-results-grid {
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: scroll;
+  }
+
+  .search-result-footer {
+    width: 90%;
+    margin: 40px auto 0;
+
+    color: $dark-green;
+    border: 1.5px solid $dark-green;
+    border-radius: 25px;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    * {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    img {
+      width: 22px;
+      height: 25px;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 14px;
+    }
+  }
+}
