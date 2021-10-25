@@ -163,3 +163,19 @@
     }
   }
 }
+
+@media only screen and (max-width: $mobile-large-screen) {
+  .card-container {
+    .card-image-container {
+      margin-top: 50px;
+
+      width: 170px;
+      height: 150px;
+
+      img {
+        max-width: 170px;
+        max-height: 150px;
+      }
+    }
+  }
+}

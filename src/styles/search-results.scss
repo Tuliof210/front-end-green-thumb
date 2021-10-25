@@ -153,4 +153,10 @@
     margin: 40px 0;
     width: 50%;
   }
+
+  #search-results-grid {
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: scroll;
+  }
 }
