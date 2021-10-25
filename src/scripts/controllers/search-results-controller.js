@@ -3,6 +3,7 @@ import SearchResultsComponent from '../../components/search-results-component.ht
 import EmptySearchResultsComponent from '../../components/empty-search-results-component.html';
 
 import { getCurrentSearchResults } from '../services/api-service';
+import { iconRules } from './card-icons-rules';
 
 const searchResultsElement = document.querySelector('#search-results');
 
@@ -28,18 +29,39 @@ function populateCards(currentSearch) {
 
   const cards = currentSearch.map((item) => {
     const componentBase = CardComponent;
-
     const componentWithId = componentBase.replace('generic-id', `card-${item.id}`);
-    const componentWithImage = componentWithId.replace('#generic-image', `src="${item.url}"`);
-    const componentWithAltImage = componentWithImage.replace('generic-alt-image', item.name);
 
-    const componentWithName = componentWithAltImage.replace('generic-name', item.name);
-    const componentWithPrice = componentWithName.replace('generic-price', item.price);
+    const componentWithImages = populateCardImages(componentWithId, item);
+    const componentWithTexts = populateCardTexts(componentWithImages, item);
+    const componentWithIcons = populateCardIcons(componentWithTexts, item);
 
-    console.log(componentWithPrice);
-
-    return componentWithPrice;
+    return componentWithIcons;
   });
 
   return cards.join('');
+}
+
+function populateCardImages(component, { url, name }) {
+  const componentWithImage = component.replace('#generic-image', `src="${url}"`);
+  const componentWithAltImage = componentWithImage.replace('generic-alt-image', name);
+  return componentWithAltImage;
+}
+
+function populateCardTexts(component, { name, price }) {
+  const componentWithName = component.replace('generic-name', name);
+  const componentWithPrice = componentWithName.replace('generic-price', price);
+  return componentWithPrice;
+}
+
+function populateCardIcons(component, { toxicity, sun, water }) {
+  const petData = iconRules.pets.get(!toxicity);
+  const componentWithPetIcon = component.replace(petData.key, petData.replacement);
+
+  const sunData = iconRules.sun.get(sun);
+  const componentWithSunIcon = componentWithPetIcon.replace(sunData.key, sunData.replacement);
+
+  const waterData = iconRules.water.get(water);
+  const componentWithWaterIcon = componentWithSunIcon.replace(waterData.key, waterData.replacement);
+
+  return componentWithWaterIcon;
 }
