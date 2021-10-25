@@ -27,20 +27,32 @@ function buildSearchResultsComponent(currentSearch) {
 }
 
 function populateCards(currentSearch) {
-  console.log(currentSearch);
+  const cardStaffFavorite = findStaffFavorite(currentSearch);
+  const cards = currentSearch.map(createCardElement);
 
-  const cards = currentSearch.map((item) => {
-    const componentBase = item.staff_favorite ? FavoriteCardComponent : CardComponent;
-    const componentWithId = componentBase.replace('generic-id', `card-${item.id}`);
+  return [cardStaffFavorite, ...cards].join('');
+}
 
-    const componentWithImages = populateCardImages(componentWithId, item);
-    const componentWithTexts = populateCardTexts(componentWithImages, item);
-    const componentWithIcons = populateCardIcons(componentWithTexts, item);
+function findStaffFavorite(currentSearch) {
+  const index = currentSearch.findIndex((item) => item.staff_favorite);
 
-    return componentWithIcons;
-  });
+  if (index > -1) {
+    const cardData = currentSearch.splice(index, 1);
+    return cardData.map(createCardElement);
+  }
 
-  return cards.join('');
+  return [];
+}
+
+function createCardElement(item) {
+  const componentBase = item.staff_favorite ? FavoriteCardComponent : CardComponent;
+  const componentWithId = componentBase.replace('generic-id', `card-${item.id}`);
+
+  const componentWithImages = populateCardImages(componentWithId, item);
+  const componentWithTexts = populateCardTexts(componentWithImages, item);
+  const componentWithIcons = populateCardIcons(componentWithTexts, item);
+
+  return componentWithIcons;
 }
 
 function populateCardImages(component, { url, name }) {

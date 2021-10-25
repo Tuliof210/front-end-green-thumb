@@ -7,7 +7,6 @@ export function getCurrentSearchResults() {
 }
 
 export async function requestSearchResults(sun, water, pets) {
-  console.log({ sun, water, pets });
   try {
     if (!validateArguments(sun, water, pets)) {
       throw new Error('Missing arguments');
