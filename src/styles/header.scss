@@ -29,7 +29,7 @@ header {
 
 #person {
   position: absolute;
-  right: 320px;
+  right: 21.33%;
   width: 300px;
   height: auto;
 }
@@ -38,18 +38,21 @@ header {
   width: 25%;
 }
 
-#header-text {
+#header-text-container {
   width: 100%;
+  position: absolute;
+  z-index: 10;
+}
+
+#header-text {
+  margin: 0 auto;
+  width: 850px;
   flex-direction: column;
 
-  position: absolute;
-  left: 325px;
-  z-index: 10;
-
-  width: 500px;
   color: $bg-light-color;
 
   h1 {
+    width: 500px;
     margin: 10px 0 20px;
 
     font-size: 70px;
@@ -63,6 +66,35 @@ header {
 }
 
 @media only screen and (max-width: 1500px) {
+  #left-leaves {
+    width: 60%;
+    height: 300px;
+  }
+
+  #person {
+    right: 25%;
+    width: 200px;
+  }
+
+  #right-leaves {
+    height: 300px;
+  }
+
+  #header-text {
+    width: 350px;
+
+    h1 {
+      margin: 10px 0 20px;
+
+      font-size: 50px;
+      font-weight: 700;
+    }
+  }
+
+  #header-arrow-down {
+    height: 30px;
+    width: 30px;
+  }
 }
 
 @media only screen and (max-width: $desktop-small-screen) {
