@@ -1,11 +1,17 @@
+import HeaderComponent from '../../components/header-component.html';
 import MenuComponent from '../../components/menu-component.html';
 
 import { getFormSelectOptions, getSelectValues } from '../controllers/menu-controller';
 import { buildComponent } from '../controllers/search-results-controller';
 
 export function loadComponents() {
+  loadHeaderComponent();
   loadMenuComponent();
-  loadSearchResultsComponent();
+}
+//==============================================================================
+function loadHeaderComponent() {
+  const headerElement = document.querySelector('header');
+  headerElement.innerHTML = HeaderComponent;
 }
 
 //==============================================================================
