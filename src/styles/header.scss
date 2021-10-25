@@ -13,24 +13,24 @@ header {
   max-width: 1500px;
 
   background-color: $light-green;
+}
 
-  .figure {
-    height: 520px;
-  }
+.figure {
+  height: 520px;
+}
 
-  .person {
-    position: absolute;
-  }
+.person {
+  position: absolute;
+}
 
-  .leaves {
-    z-index: 5;
-  }
+.leaves {
+  z-index: 5;
+}
 
-  #left-leaves {
-    width: 60%;
-  }
+#left-leaves {
+  width: 60%;
+}
 
-  #right-leaves {
-    width: 25%;
-  }
+#right-leaves {
+  width: 25%;
 }

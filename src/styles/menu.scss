@@ -17,10 +17,10 @@
 
   width: 75px;
   height: 75px;
+}
 
-  .menu-icon {
-    width: 100%;
-  }
+.menu-icon {
+  width: 100%;
 }
 
 .menu-description {
@@ -30,45 +30,45 @@
 
 .menu-select-container {
   position: relative;
+}
 
-  .menu-select {
-    outline: none;
-    margin: 25px 0;
-    padding: 10px 15px;
+.menu-select {
+  outline: none;
+  margin: 25px 0;
+  padding: 10px 15px;
 
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 
-    color: $border-color;
-    background-color: transparent;
-    border: 1px solid $border-color;
-    border-radius: 25px;
+  color: $border-color;
+  background-color: transparent;
+  border: 1px solid $border-color;
+  border-radius: 25px;
 
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 
-    cursor: pointer;
-  }
+  cursor: pointer;
+}
 
-  .down-arrow {
-    width: 10px;
-    height: 10px;
+.down-arrow {
+  width: 10px;
+  height: 10px;
 
-    border-width: 0 2px 2px 0;
-    border-style: solid;
-    border-color: $border-color;
+  border-width: 0 2px 2px 0;
+  border-style: solid;
+  border-color: $border-color;
 
-    position: absolute;
-    right: 10px;
-    bottom: 50%;
+  position: absolute;
+  right: 10px;
+  bottom: 50%;
 
-    transform: rotate(45deg) translateY(40%);
-    -moz-transform: rotate(45deg) translateY(40%);
-    -webkit-transform: rotate(45deg) translateY(40%);
+  transform: rotate(45deg) translateY(40%);
+  -moz-transform: rotate(45deg) translateY(40%);
+  -webkit-transform: rotate(45deg) translateY(40%);
 
-    cursor: pointer;
-  }
+  cursor: pointer;
 }
 
 @media only screen and (max-width: $desktop-small-screen) {
