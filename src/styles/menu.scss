@@ -40,6 +40,8 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+
+    cursor: pointer;
   }
 
   .down-arrow {
@@ -57,5 +59,7 @@
     transform: rotate(45deg) translateY(40%);
     -moz-transform: rotate(45deg) translateY(40%);
     -webkit-transform: rotate(45deg) translateY(40%);
+
+    cursor: pointer;
   }
 }

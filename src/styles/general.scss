@@ -13,6 +13,10 @@ $green-font-color: #1e6b4e;
 
 $border-color: #ababab;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   // reset css
   margin: 0;

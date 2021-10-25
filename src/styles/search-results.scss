@@ -56,6 +56,36 @@
       grid-row-end: 3;
     }
   }
+
+  .search-result-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 60px;
+    width: 100%;
+    height: 50px;
+
+    color: $dark-green;
+    border: 1.5px solid $dark-green;
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    * {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    img {
+      width: 25px;
+      height: 30px;
+    }
+    p {
+      font-weight: 300;
+      font-size: 16px;
+    }
+  }
 }
 
 .card-container {
