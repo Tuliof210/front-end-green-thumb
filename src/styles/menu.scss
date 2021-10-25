@@ -3,6 +3,13 @@
   background-color: $bg-light-color;
 }
 
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+}
+
 .menu-icon-container {
   display: flex;
   align-items: center;
@@ -61,5 +68,20 @@
     -webkit-transform: rotate(45deg) translateY(40%);
 
     cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: $desktop-small-screen) {
+  .menu-item {
+    width: 150px;
+  }
+  .menu-icon-container {
+    margin-bottom: 20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .menu-description {
+    font-size: 13px;
   }
 }

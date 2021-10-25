@@ -13,6 +13,9 @@ $green-font-color: #1e6b4e;
 
 $border-color: #ababab;
 
+$desktop-small-screen: 900px;
+$mobile-large-screen: 600px;
+
 html {
   scroll-behavior: smooth;
 }
@@ -33,4 +36,10 @@ body {
   display: flex;
   justify-content: space-between;
   max-width: 850px;
+}
+
+@media only screen and (max-width: $desktop-small-screen) {
+  .body-container {
+    max-width: 550px;
+  }
 }
