@@ -178,4 +178,67 @@
       }
     }
   }
+
+  .staff-favorite-result {
+    padding: 10px;
+    justify-content: space-between;
+
+    .card-container-header {
+      .staff-favorite-label-container {
+        height: 0;
+
+        .staff-favorite-label {
+          left: -10px;
+
+          width: 70%;
+          height: 40px;
+
+          font-size: 12px;
+          line-height: 40px;
+        }
+      }
+
+      .card-image-container {
+        width: 170px;
+        height: 150px;
+
+        img {
+          max-width: 170px;
+          max-height: 150px;
+        }
+      }
+    }
+
+    .card-container-footer {
+      flex-direction: column;
+
+      .staff-favorite-price {
+        text-align: right;
+        font-size: 16px;
+      }
+
+      .staff-favorite-name {
+        font-size: 16px;
+      }
+
+      .card-footer-icons {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .card-icons {
+          margin: 10px 0 0;
+          width: 40%;
+
+          display: flex;
+          justify-content: space-between;
+
+          img {
+            width: 17px;
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }

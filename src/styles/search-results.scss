@@ -137,7 +137,7 @@
     text-align: left;
 
     h1 {
-      margin: 20px 0;
+      margin: 30px 0 20px;
       font-size: 45px;
     }
 
@@ -158,5 +158,32 @@
     display: flex;
     justify-content: flex-start;
     overflow-x: scroll;
+  }
+
+  .search-result-footer {
+    width: 90%;
+    margin: 40px auto 0;
+
+    color: $dark-green;
+    border: 1.5px solid $dark-green;
+    border-radius: 25px;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    * {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    img {
+      width: 22px;
+      height: 25px;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 14px;
+    }
   }
 }
