@@ -1,4 +1,6 @@
 import CardComponent from '../../components/card-component.html';
+import FavoriteCardComponent from '../../components/favorite-card-component.html';
+
 import SearchResultsComponent from '../../components/search-results-component.html';
 import EmptySearchResultsComponent from '../../components/empty-search-results-component.html';
 
@@ -28,7 +30,7 @@ function populateCards(currentSearch) {
   console.log(currentSearch);
 
   const cards = currentSearch.map((item) => {
-    const componentBase = CardComponent;
+    const componentBase = item.staff_favorite ? FavoriteCardComponent : CardComponent;
     const componentWithId = componentBase.replace('generic-id', `card-${item.id}`);
 
     const componentWithImages = populateCardImages(componentWithId, item);
@@ -49,7 +51,7 @@ function populateCardImages(component, { url, name }) {
 
 function populateCardTexts(component, { name, price }) {
   const componentWithName = component.replace('generic-name', name);
-  const componentWithPrice = componentWithName.replace('generic-price', price);
+  const componentWithPrice = componentWithName.replace('generic-price', `\$${price}`);
   return componentWithPrice;
 }
 
