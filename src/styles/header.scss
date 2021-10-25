@@ -1,26 +1,29 @@
+$header-default-height: 450px;
+
 header {
   background-color: $dark-green;
 }
 
 #header-container {
-  height: 450px;
+  margin: auto;
+  max-width: $desktop-large-screen;
+  height: $header-default-height;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  margin: auto;
-  max-width: $desktop-large-screen;
 
   background-color: $light-green;
 }
 
 .header-layer {
   position: absolute;
+  width: $desktop-large-screen;
+  height: $header-default-height;
 
   display: flex;
   justify-content: center;
-  width: $desktop-large-screen;
+  max-width: 100%;
 }
 
 #header-bg-image,
@@ -33,7 +36,7 @@ header {
 }
 
 .figure {
-  height: 450px;
+  height: $header-default-height;
 }
 
 #left-leaves {
@@ -67,36 +70,7 @@ header {
   width: 50px;
 }
 
-@media only screen and (max-width: 1500px) {
-  #left-leaves {
-    width: 60%;
-    height: 300px;
-  }
-
-  #person {
-    right: 25%;
-    width: 200px;
-  }
-
-  #right-leaves {
-    height: 300px;
-  }
-
-  #header-text {
-    width: 350px;
-
-    h1 {
-      margin: 10px 0 20px;
-
-      font-size: 50px;
-      font-weight: 700;
-    }
-  }
-
-  #header-arrow-down {
-    height: 30px;
-    width: 30px;
-  }
+@media only screen and (max-width: $desktop-large-screen) {
 }
 
 @media only screen and (max-width: $tablet-screen) {
