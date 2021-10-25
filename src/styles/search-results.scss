@@ -76,6 +76,7 @@
     width: 25px;
     height: 30px;
   }
+
   p {
     font-weight: 300;
     font-size: 16px;
@@ -83,37 +84,35 @@
 }
 
 @media only screen and (max-width: $desktop-small-screen) {
-  .search-results-container {
-    #search-results-grid {
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+  .search-results-header {
+    img {
+      width: 120px;
     }
-    .empty-results-container {
-      padding: 40px 0;
 
-      .left-text {
-        h1 {
-          font-size: 35px;
-          font-weight: 700;
-          color: $gray-font-color;
-        }
+    h1 {
+      font-size: 45px;
+    }
+  }
 
-        p {
-          width: 55%;
-          margin: 0;
-          font-size: 12px;
-          font-weight: 400;
-          color: $gray-font-color;
-        }
-      }
+  #search-results-grid {
+    margin-top: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-      .right-icon {
-        text-align: center;
+  .left-text {
+    h1 {
+      font-size: 35px;
+    }
 
-        img {
-          width: 80px;
-        }
-      }
+    p {
+      width: 55%;
+      font-size: 12px;
+    }
+  }
+
+  .right-icon {
+    img {
+      width: 80px;
     }
   }
 }
