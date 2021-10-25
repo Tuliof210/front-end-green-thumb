@@ -1,4 +1,4 @@
-$header-default-height: 450px;
+$header-default-height: 550px;
 
 header {
   background-color: $dark-green;
@@ -18,12 +18,16 @@ header {
 
 .header-layer {
   position: absolute;
+  max-width: 100%;
   width: $desktop-large-screen;
   height: $header-default-height;
 
   display: flex;
   justify-content: center;
-  max-width: 100%;
+  align-items: center;
+}
+.leaves {
+  justify-content: space-between;
 }
 
 #header-bg-image,
@@ -33,6 +37,12 @@ header {
 
 #header-bg-image {
   text-align: right;
+  margin-right: -15px;
+
+  img {
+    width: 350px;
+    height: auto;
+  }
 }
 
 .figure {
@@ -40,16 +50,11 @@ header {
 }
 
 #left-leaves {
-  width: 62%;
+  width: 60%;
 }
 
 #right-leaves {
   width: 25%;
-}
-
-#person {
-  width: 300px;
-  height: auto;
 }
 
 #header-text {
@@ -58,7 +63,7 @@ header {
 
   h1 {
     width: 500px;
-    margin: 10px 0 20px;
+    margin: 40px 0 50px;
 
     font-size: 70px;
     font-weight: 700;
@@ -70,10 +75,63 @@ header {
   width: 50px;
 }
 
-@media only screen and (max-width: $desktop-large-screen) {
+@media only screen and (max-width: 1400px) {
+  #header-bg-image {
+    margin-right: 5vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #header-container,
+  .header-layer,
+  .figure {
+    height: 300px;
+  }
+
+  #header-bg-image {
+    margin-right: 21vw;
+
+    img {
+      width: 215px;
+    }
+  }
+
+  #header-text {
+    h1 {
+      width: 400px;
+      font-size: 40px;
+      margin: 20px 0 40px;
+    }
+  }
+
+  #header-arrow-down {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 @media only screen and (max-width: $tablet-screen) {
+  #header-text {
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #right-leaves {
+    width: 20%;
+  }
+
+  #header-bg-image {
+    margin-right: 10vw;
+  }
+
+  #header-text {
+    h1 {
+      width: 350px;
+      font-size: 35px;
+      margin: 20px 0 40px;
+    }
+  }
 }
 
 @media only screen and (max-width: $mobile-screen) {
