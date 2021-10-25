@@ -5,7 +5,7 @@ import { getFormSelectOptions, getSelectValues } from '../controllers/menu-contr
 import { buildComponent } from '../controllers/search-results-controller';
 
 export function loadComponents() {
-  // loadHeaderComponent();
+  loadHeaderComponent();
   loadMenuComponent();
 }
 //==============================================================================

@@ -16,11 +16,7 @@ header {
 }
 
 .figure {
-  height: 520px;
-}
-
-.person {
-  position: absolute;
+  height: 450px;
 }
 
 .leaves {
@@ -28,9 +24,49 @@ header {
 }
 
 #left-leaves {
-  width: 60%;
+  width: 62%;
+}
+
+#person {
+  position: absolute;
+  right: 320px;
+  width: 300px;
+  height: auto;
 }
 
 #right-leaves {
   width: 25%;
+}
+
+#header-text {
+  width: 100%;
+  flex-direction: column;
+
+  position: absolute;
+  left: 325px;
+  z-index: 10;
+
+  width: 500px;
+  color: $bg-light-color;
+
+  h1 {
+    margin: 10px 0 20px;
+
+    font-size: 70px;
+    font-weight: 700;
+  }
+}
+
+#header-arrow-down {
+  height: 50px;
+  width: 50px;
+}
+
+@media only screen and (max-width: 1500px) {
+}
+
+@media only screen and (max-width: $desktop-small-screen) {
+}
+
+@media only screen and (max-width: $mobile-large-screen) {
 }
