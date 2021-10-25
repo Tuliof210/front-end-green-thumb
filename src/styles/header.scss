@@ -3,53 +3,55 @@ header {
 }
 
 #header-container {
-  position: relative;
+  height: 450px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   margin: auto;
-  max-width: 1500px;
+  max-width: $desktop-large-screen;
 
   background-color: $light-green;
+}
+
+.header-layer {
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  width: $desktop-large-screen;
+}
+
+#header-bg-image,
+#header-text {
+  width: $desktop-small-screen;
+}
+
+#header-bg-image {
+  text-align: right;
 }
 
 .figure {
   height: 450px;
 }
 
-.leaves {
-  z-index: 5;
-}
-
 #left-leaves {
   width: 62%;
-}
-
-#person {
-  position: absolute;
-  right: 21.33%;
-  width: 300px;
-  height: auto;
 }
 
 #right-leaves {
   width: 25%;
 }
 
-#header-text-container {
-  width: 100%;
-  position: absolute;
-  z-index: 10;
+#person {
+  width: 300px;
+  height: auto;
 }
 
 #header-text {
-  margin: 0 auto;
-  width: 850px;
-  flex-direction: column;
-
   color: $bg-light-color;
+  text-align: left;
 
   h1 {
     width: 500px;
@@ -97,8 +99,8 @@ header {
   }
 }
 
-@media only screen and (max-width: $desktop-small-screen) {
+@media only screen and (max-width: $tablet-screen) {
 }
 
-@media only screen and (max-width: $mobile-large-screen) {
+@media only screen and (max-width: $mobile-screen) {
 }

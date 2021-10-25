@@ -71,7 +71,7 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: $desktop-small-screen) {
+@media only screen and (max-width: $tablet-screen) {
   .menu-item {
     width: 150px;
   }
@@ -87,7 +87,7 @@
   }
 }
 
-@media only screen and (max-width: $mobile-large-screen) {
+@media only screen and (max-width: $mobile-screen) {
   #menu {
     padding: 10px 0;
   }

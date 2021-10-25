@@ -119,7 +119,7 @@
   }
 }
 
-@media only screen and (max-width: $desktop-small-screen) {
+@media only screen and (max-width: $tablet-screen) {
   .card-container {
     padding: 10px;
 
@@ -164,7 +164,7 @@
   }
 }
 
-@media only screen and (max-width: $mobile-large-screen) {
+@media only screen and (max-width: $mobile-screen) {
   .card-container {
     .card-image-container {
       margin-top: 50px;
