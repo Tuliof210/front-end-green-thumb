@@ -1,6 +1,6 @@
 import MenuComponent from '../../components/menu-component.html';
-import { getFormSelectOptions, getSelectValues } from '../controllers/menu-controller';
 
+import { getFormSelectOptions, getSelectValues } from '../controllers/menu-controller';
 import { buildComponent } from '../controllers/search-results-controller';
 
 export function loadComponents() {
